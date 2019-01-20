@@ -11,9 +11,7 @@
     <meta name="author" content="佚先生">
     
     <meta name="description" content="Hexo+Github 搭建博客准备工作：Node.js官网环境Hexo官网Git工具Github账号Markdown语法简介
-###一.环境配置
-
-安装 Node.js 环境 与 Git 工具安装 Node.js的最好方法是使用nvm,在终端中粘贴安装最新版本 nvm 的代码:1$ curl -o">
+一.环境配置安装Node.js环境与Git 工具安装 Node.js的最好方法是使用nvm,在终端中粘贴安装最新版本 nvm 的代码:1$ curl -o- https:/">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -245,68 +243,32 @@
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Hexo-Github-搭建博客"><span class="section table-of-contents-text">Hexo+Github 搭建博客</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Hexo-Github-搭建博客"><span class="section table-of-contents-text">Hexo+Github 搭建博客</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#一-环境配置"><span class="section table-of-contents-text">一.环境配置</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#二-Hexo-初始化配置"><span class="section table-of-contents-text">二.Hexo 初始化配置</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#三-部署-Hexo-到-Github"><span class="section table-of-contents-text">三.部署 Hexo 到 Github</span></a></li></ol></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
                 <h1 id="Hexo-Github-搭建博客"><a href="#Hexo-Github-搭建博客" class="headerlink" title="Hexo+Github 搭建博客"></a>Hexo+Github 搭建博客</h1><p>准备工作：<br><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>环境<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a><br><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>工具<br><a href="https://github.com/" target="_blank" rel="noopener">Github</a>账号<br><a href="https://coding.net/help/doc/project/markdown.html" target="_blank" rel="noopener">Markdown语法简介</a></p>
-<p>###一.环境配置</p>
-<ol>
-<li>安装 Node.js 环境 与 Git 工具<br>安装 Node.js的最好方法是使用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a>,在终端中粘贴安装最新版本 nvm 的代码:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>   然后使用<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm -v</span><br></pre></td></tr></table></figure></p>
-<p>   测试是否安装成功</p>
-<p>   如果 nvm 安装成功可使用:<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install node</span><br></pre></td></tr></table></figure></p>
-<p>   安装 Node.js<br>   也可以使用下面的命令格式安装官网最新版本<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install node.js版本号</span><br></pre></td></tr></table></figure></p>
-<p>   macOS如果安装了 xcode 会默认安装 Git 命令行工具，或者安装<code>Xcode command line tools</code><br>   如果都没有安装直接去<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>官网下载对应系统安装包安装即可  </p>
-<ol>
-<li>安装 Hexo<br> 使用npm命令安装 Hexo 其中<code>-g</code>表示全局安装 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>为了便于将博客发布到 GitHub 上同时要安装`hexo-deployer-git`
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    $ npm install hexo-deployer-git --save</span><br><span class="line">    ```  </span><br><span class="line">    </span><br><span class="line">1. 准备 Github 环境</span><br><span class="line">    这部分需要准备 Github 仓库和本机 ssh 公钥</span><br><span class="line">    首先在 Github 中新建一个仓库，在`Repository name`处填写:</span><br></pre></td></tr></table></figure>
-
-yourGithubAccount.github.io
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">其中`yourGithubAccount`就是你的用户名</span><br><span class="line">然后生成自己的 ssh 公钥</span><br></pre></td></tr></table></figure>
-
-$ ssh-keygen -t rsa -C “your_Email@example.com” 
-# 按照提供的 Email 生成 ssh公钥
-$ cat ~/.ssh/id_rsa.pub    
-# 打开生成的公钥
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将打开的公钥内容添加到`Github----Account Settings----SSH and GPG keys`中</span><br></pre></td></tr></table></figure>
-
-$ ssh -T git@github.com
-# 测试是否配置成功
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">完善用户信息</span><br><span class="line">Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置.</span><br></pre></td></tr></table></figure>
-
-$ git config --global user.name &quot;username&quot;----Github用户名
-$ git config --global user.email &quot;your_email@example.com&quot;----填写自己的邮箱
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">###二.Hexo 初始化配置</span><br><span class="line">1. 创建 Hexo 文件夹</span><br><span class="line">    根据喜好自己建立文件夹用于 Hexo 的初始化与部署，使用`cd`进入文件夹</span><br></pre></td></tr></table></figure>
-
-$ hexo init
-# 初始化 hexo 下载必要文件
-$ npm install
-# 安装依赖
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 本地查看效果</span><br></pre></td></tr></table></figure>
-
-$ hexo g
-# ---hexo generate 渲染静态页面
-$ hexo s
-# ---hexo server 启动本地服务器
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    根据提示在浏览器中打开`localhost:4000`即可预览本地效果</span><br><span class="line">    </span><br><span class="line">###三.部署 Hexo 到 Github</span><br><span class="line">1. 找到 Hexo 文件夹下的`_config.yml`文件，修改其中`deploy`参数</span><br></pre></td></tr></table></figure>
-
-deploy:
-    type: git
-    repository: “名为 yourGithubAccount.github.io仓库的 ssh 链接”
-    branch: master
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">修改完成后在此目录中打开终端</span><br></pre></td></tr></table></figure>
-
-$ hexo g -d
-# 先生成静态文件资源然后部署到配置的 Github 仓库中
-```
-</code></pre><hr>
+<h3 id="一-环境配置"><a href="#一-环境配置" class="headerlink" title="一.环境配置"></a><strong>一.环境配置</strong></h3><p><strong>安装Node.js环境与Git 工具</strong><br>安装 Node.js的最好方法是使用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a>,在终端中粘贴安装最新版本 nvm 的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure></p>
+<p>然后使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm -v</span><br></pre></td></tr></table></figure></p>
+<p>测试是否安装成功</p>
+<p>如果 nvm 安装成功可使用:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install node</span><br></pre></td></tr></table></figure>
+<p><strong>安装 Node.js</strong><br>也可以使用下面的命令格式安装官网最新版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install node.js版本号</span><br></pre></td></tr></table></figure></p>
+<p>macOS如果安装了 xcode 会默认安装 Git 命令行工具，或者安装<code>Xcode command line tools</code><br>如果都没有安装直接去<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>官网下载对应系统安装包安装即可  </p>
+<p><strong>安装 Hexo</strong><br>使用npm命令安装 Hexo 其中<code>-g</code>表示全局安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<p>为了便于将博客发布到 GitHub 上同时要安装<code>hexo-deployer-git</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p><strong>准备 Github 环境</strong><br>这部分需要准备 Github 仓库和本机 ssh 公钥<br>首先在 Github 中新建一个仓库，在<code>Repository name</code>处填写:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yourGithubAccount.github.io</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>yourGithubAccount</code>就是你的用户名<br>然后生成自己的 ssh 公钥<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “your_Email@example.com” </span><br><span class="line"># 按照提供的 Email 生成 ssh公钥</span><br><span class="line">$ cat ~/.ssh/id_rsa.pub    </span><br><span class="line"># 打开生成的公钥</span><br></pre></td></tr></table></figure></p>
+<p>将打开的公钥内容添加到<code>Github----Account Settings----SSH and GPG keys</code>中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line"># 测试是否配置成功</span><br></pre></td></tr></table></figure></p>
+<p><strong>完善用户信息</strong><br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;username&quot;----Github用户名</span><br><span class="line">$ git config --global user.email &quot;your_email@example.com&quot;----填写自己的邮箱</span><br></pre></td></tr></table></figure></p>
+<h3 id="二-Hexo-初始化配置"><a href="#二-Hexo-初始化配置" class="headerlink" title="二.Hexo 初始化配置"></a><strong>二.Hexo 初始化配置</strong></h3><p>创建 Hexo 文件夹<br>根据喜好自己建立文件夹用于 Hexo 的初始化与部署，使用<code>cd</code>进入文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line"># 初始化 hexo 下载必要文件</span><br><span class="line">$ npm install</span><br><span class="line"># 安装依赖</span><br></pre></td></tr></table></figure></p>
+<p>本地查看效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line"># ---hexo generate 渲染静态页面</span><br><span class="line">$ hexo s</span><br><span class="line"># ---hexo server 启动本地服务器</span><br></pre></td></tr></table></figure></p>
+<p>根据提示在浏览器中打开<code>localhost:4000</code>即可预览本地效果</p>
+<h3 id="三-部署-Hexo-到-Github"><a href="#三-部署-Hexo-到-Github" class="headerlink" title="三.部署 Hexo 到 Github"></a><strong>三.部署 Hexo 到 Github</strong></h3><p>找到 Hexo 文件夹下的<code>_config.yml</code>文件，修改其中<code>deploy</code>参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: “名为 yourGithubAccount.github.io仓库的 ssh 链接”</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p>修改完成后在此目录中打开终端<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br><span class="line"># 先生成静态文件资源然后部署到配置的 Github 仓库中</span><br></pre></td></tr></table></figure></p>
+<hr>
 <p>Now:2019/1/21 01:11<br>图床尚未就绪，等待更新</p>
 
                 
