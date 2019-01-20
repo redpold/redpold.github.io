@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>hexo-github搭建博客</title>
+      <link href="/2019/01/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2019/01/21/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-Github-搭建博客"><a href="#Hexo-Github-搭建博客" class="headerlink" title="Hexo+Github 搭建博客"></a>Hexo+Github 搭建博客</h1><p>准备工作：<br><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>环境<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a><br><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>工具<br><a href="https://github.com/" target="_blank" rel="noopener">Github</a>账号<br><a href="https://coding.net/help/doc/project/markdown.html" target="_blank" rel="noopener">Markdown语法简介</a></p><p>###一.环境配置</p><ol><li>安装 Node.js 环境 与 Git 工具<br>安装 Node.js的最好方法是使用<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a>,在终端中粘贴安装最新版本 nvm 的代码:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure></li></ol><p>   然后使用<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm -v</span><br></pre></td></tr></table></figure></p><p>   测试是否安装成功</p><p>   如果 nvm 安装成功可使用:<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install node</span><br></pre></td></tr></table></figure></p><p>   安装 Node.js<br>   也可以使用下面的命令格式安装官网最新版本<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install node.js版本号</span><br></pre></td></tr></table></figure></p><p>   macOS如果安装了 xcode 会默认安装 Git 命令行工具，或者安装<code>Xcode command line tools</code><br>   如果都没有安装直接去<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>官网下载对应系统安装包安装即可  </p><ol><li>安装 Hexo<br> 使用npm命令安装 Hexo 其中<code>-g</code>表示全局安装 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure></li></ol><pre><code>为了便于将博客发布到 GitHub 上同时要安装`hexo-deployer-git`<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    $ npm install hexo-deployer-git --save</span><br><span class="line">    ```  </span><br><span class="line">    </span><br><span class="line">1. 准备 Github 环境</span><br><span class="line">    这部分需要准备 Github 仓库和本机 ssh 公钥</span><br><span class="line">    首先在 Github 中新建一个仓库，在`Repository name`处填写:</span><br></pre></td></tr></table></figure>yourGithubAccount.github.io<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">其中`yourGithubAccount`就是你的用户名</span><br><span class="line">然后生成自己的 ssh 公钥</span><br></pre></td></tr></table></figure>$ ssh-keygen -t rsa -C “your_Email@example.com” # 按照提供的 Email 生成 ssh公钥$ cat ~/.ssh/id_rsa.pub    # 打开生成的公钥<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将打开的公钥内容添加到`Github----Account Settings----SSH and GPG keys`中</span><br></pre></td></tr></table></figure>$ ssh -T git@github.com# 测试是否配置成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">完善用户信息</span><br><span class="line">Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置.</span><br></pre></td></tr></table></figure>$ git config --global user.name &quot;username&quot;----Github用户名$ git config --global user.email &quot;your_email@example.com&quot;----填写自己的邮箱<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">###二.Hexo 初始化配置</span><br><span class="line">1. 创建 Hexo 文件夹</span><br><span class="line">    根据喜好自己建立文件夹用于 Hexo 的初始化与部署，使用`cd`进入文件夹</span><br></pre></td></tr></table></figure>$ hexo init# 初始化 hexo 下载必要文件$ npm install# 安装依赖<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 本地查看效果</span><br></pre></td></tr></table></figure>$ hexo g# ---hexo generate 渲染静态页面$ hexo s# ---hexo server 启动本地服务器<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    根据提示在浏览器中打开`localhost:4000`即可预览本地效果</span><br><span class="line">    </span><br><span class="line">###三.部署 Hexo 到 Github</span><br><span class="line">1. 找到 Hexo 文件夹下的`_config.yml`文件，修改其中`deploy`参数</span><br></pre></td></tr></table></figure>deploy:    type: git    repository: “名为 yourGithubAccount.github.io仓库的 ssh 链接”    branch: master<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">修改完成后在此目录中打开终端</span><br></pre></td></tr></table></figure>$ hexo g -d# 先生成静态文件资源然后部署到配置的 Github 仓库中```</code></pre><hr><p>Now:2019/1/21 01:11<br>图床尚未就绪，等待更新</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 一步一个脚印 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Github </tag>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>macOS Opencv4.0.1+xcode10.1 安装并配置</title>
       <link href="/2019/01/20/macOS-Opencv/"/>
       <url>/2019/01/20/macOS-Opencv/</url>
