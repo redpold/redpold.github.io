@@ -69,18 +69,7 @@
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<p>大家好，我是XXX。欢迎来到我的个人技术博客。</p><p>这里用markdown写下你的简介，就跟平时写md一样就可以了。</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>读书</title>
-      <link href="/reading/index.html"/>
-      <url>/reading/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>大家好，我是佚先生。欢迎来到我的个人瞎扯淡博客。</p><p>我会在这里分享一些在学习或工作中的内容，留下一些痕迹。</p>]]></content>
       
     </entry>
     
