@@ -309,21 +309,31 @@
 <li><p><strong>图片</strong><br> 语法：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line">#图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">#图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![giao辞](http://plo5fw862.bkt.clouddn.com/15480891252911.jpg)</span><br><span class="line"># ps:本博客放大图片时才显示图片alt</span><br></pre></td></tr></table></figure>
-<p> 效果：<br> <img src="http://plo5fw862.bkt.clouddn.com/15480891252911.jpg" alt="giao辞"></p>
+<p> 效果：</p>
+<blockquote>
+<p><img src="http://plo5fw862.bkt.clouddn.com/15480891252911.jpg" alt="giao辞"></p>
+</blockquote>
 </li>
 <li><p><strong>超链接</strong><br> 语法：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br><span class="line">#title可加可不加</span><br></pre></td></tr></table></figure>
 <p> 示例：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[佚先生的 Blog](https://redpold.github.io/)</span><br><span class="line">[Bing](http://www.bing.com/)</span><br></pre></td></tr></table></figure>
-<p> 效果如下：<br> <a href="https://redpold.github.io/" target="_blank" rel="noopener">佚先生的 Blog</a><br> <a href="http://www.bing.com/" target="_blank" rel="noopener">Bing</a></p>
+<p> 效果如下：</p>
+<blockquote>
+<p><a href="https://redpold.github.io/" target="_blank" rel="noopener">佚先生的 Blog</a><br><a href="http://www.bing.com/" target="_blank" rel="noopener">Bing</a></p>
+</blockquote>
 <hr>
 <p> PS:文档中的链接默认在浏览器新标签中打开，之前提到过Markdown 还支持在文档中插入 <code>Html</code> 标签，如果我们不想在新标签中打开链接可使用以下方法：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p> 示例：<br> <a href="https://redpold.github.io/" target="_blank">佚先生的 Blog</a></p>
+<p> 示例：</p>
+<blockquote>
+<p><a href="https://redpold.github.io/" target="_blank">佚先生的 Blog</a></p>
+</blockquote>
 </li>
 <li><p><strong>列表</strong><br> Markdown中列表分为有序列表和无序列表两种：<br> 无序列表：<br> 无序列表用 <code>- + *</code> 任何一种都可以</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
 <p> 效果如下：</p>
+<blockquote>
 <ul>
 <li>列表内容</li>
 </ul>
@@ -333,40 +343,43 @@
 <ul>
 <li>列表内容</li>
 </ul>
+</blockquote>
 <hr>
 <p> 有序列表：<br> 有序列表就是数字加点：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">3. 列表内容</span><br><span class="line"># 序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
 <p> 效果如下：</p>
+<blockquote>
 <ol>
 <li>列表内容</li>
 <li>列表内容</li>
-<li><p>列表内容</p>
-<p>列表嵌套：<br>上一级和下一级之间敲三个空格即可，有序列表无序列表嵌套方法相同：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 标题一</span><br><span class="line">    1. 嵌套一</span><br><span class="line">    2. 嵌套二</span><br><span class="line">    3. 嵌套三</span><br><span class="line">2. 标题二</span><br><span class="line">    1. 嵌套一</span><br><span class="line">    2. 嵌套二</span><br><span class="line">    3. 嵌套三</span><br></pre></td></tr></table></figure>
-<ol>
-<li>标题一<ol>
-<li>嵌套一</li>
-<li>嵌套二</li>
-<li>嵌套三</li>
+<li>列表内容</li>
 </ol>
-</li>
-<li>标题二<ol>
-<li>嵌套一</li>
-<li>嵌套二</li>
-<li>嵌套三</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
+</blockquote>
+<p> 列表嵌套：<br> 上一级和下一级之间敲三个空格即可，有序列表无序列表嵌套方法相同：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 标题一</span><br><span class="line">    1. 嵌套一</span><br><span class="line">    2. 嵌套二</span><br><span class="line">    3. 嵌套三</span><br><span class="line">2. 标题二</span><br><span class="line">    1. 嵌套一</span><br><span class="line">    2. 嵌套二</span><br><span class="line">    3. 嵌套三</span><br></pre></td></tr></table></figure>
+<blockquote>
+<pre><code>1. 标题一
+    1. 嵌套一
+    2. 嵌套二
+    3. 嵌套三
+2. 标题二
+    1. 嵌套一
+    2. 嵌套二
+    3. 嵌套三
+</code></pre></blockquote>
 </li>
 <li><p><strong>代码</strong><br> 语法：<br> 单行代码：代码之间分别用一个反引号包起来:</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`代码内容`</span><br></pre></td></tr></table></figure>
-<p> 示例：<br> <code>代码内容</code></p>
+<p> 示例：</p>
+<blockquote>
+<p><code>代码内容</code></p>
+</blockquote>
 <p> 代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(```)</span><br><span class="line">代码...</span><br><span class="line">代码...</span><br><span class="line">代码...</span><br><span class="line">(```)</span><br><span class="line"># 注意：实际使用中没有括号！！！</span><br></pre></td></tr></table></figure>
 <p> 示例：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static void mian(Stirng[] args)&#123;</span><br><span class="line">    System.out.println(&quot;别的不会了&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static void mian(Stirng[] args)&#123;</span><br><span class="line">    System.out.println(&quot;别的不会了&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ol>
 <ol start="9">
@@ -374,24 +387,12 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">|表头|表头|表头|</span><br><span class="line">|---|---|---|</span><br><span class="line">|内容|内容|内容|</span><br><span class="line">|内容|内容|内容|</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。</span><br></pre></td></tr></table></figure>
 <p> 示例：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 姓名 | 技能 | 备注 |</span><br><span class="line">| --- | --- | --- |</span><br><span class="line">| 六小龄童 | 章口就莱 | 中美合拍 |</span><br></pre></td></tr></table></figure>
+<p> 效果如下：</p>
+<blockquote>
+<p>| 姓名 | 技能 | 备注 |<br>| — | — | — |<br>| 六小0童 | 章口就莱 战术后仰 | 中美合拍 六学创始人 |</p>
+</blockquote>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>姓名</th>
-<th>技能</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>六小0童</td>
-<td>章口就莱 战术后仰</td>
-<td>中美合拍 六学创始人</td>
-</tr>
-</tbody>
-</table>
 <hr>
 <p>Written:2019/01/22 1:20</p>
 
