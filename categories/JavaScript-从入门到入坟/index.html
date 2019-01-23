@@ -7,20 +7,13 @@
 
     
 
-    <title>macOS Opencv4.0.1+xcode10.1 安装并配置 | Hello World！</title>
+    <title>JavaScript 从入门到入坟 | Hello World！</title>
     <meta name="author" content="佚先生">
-    
-    <meta name="description" content="macOS Opencv4.0.1+xcode10.1 安装并配置1.安装 OpenCV使用命令:
-
-brew install opencvbrew install cmake
-
-安装 opencv 与 cmake
-2.配置 Xcode 项目新建一个Command Line Tools 项目并选择语">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="macOS Opencv4.0.1+xcode10.1 安装并配置">
+    
     <meta property="og:site_name" content="佚先生的Blog">
 
     
@@ -214,95 +207,30 @@ brew install opencvbrew install cmake
 
     <main>
         <div class="container main-container">
-    <nav class="page-nav hide-on-small-only">
+    
+
+<nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
-            
-    
-    
-    <a class="breadcrumb" href="/categories/Opencv/">Opencv</a>
-
 
         
-
+            <a class="breadcrumb" href="/categories/JavaScript-从入门到入坟/">JavaScript 从入门到入坟</a>
         
     </div>
 </nav>
 
-<article>
-    <div class="card">
-        <div class="card-content">
-            
-
-            <div class="article-title">
-                
-    
-        <h1>macOS Opencv4.0.1+xcode10.1 安装并配置</h1>
-    
 
 
-            </div>
-            <time class="pink-link-context" datetime="2019-01-20T15:49:51.000Z"><a href="/2019/01/20/macOS-Opencv/">2019-01-20</a></time>
-
-            <span id="busuanzi_container_page_pv" class="read-times-container">
-    <i class="fa fa-eye"></i>
-    <span id="busuanzi_value_page_pv"></span>
-</span>
-
-            
-    <div class="tags-row">
+    <div class="collection mt-0">
         
-            <a href="/tags/Opencv/" class="chip pink lighten-1">Opencv</a>
-        
-            <a href="/tags/macOS/" class="chip pink lighten-1">macOS</a>
-        
-            <a href="/tags/xcode/" class="chip pink lighten-1">xcode</a>
+            <a href="/2019/01/22/JavaScript从入门到入坟-开篇/" class="collection-item grey-text text-darken-1">
+                <time datetime="2019-01-22T13:11:17.000Z">2019-01-22</time>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                JavaScript从入门到入坟:开篇
+            </a>
         
     </div>
-
-
-            <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#macOS-Opencv4-0-1-xcode10-1-安装并配置"><span class="section table-of-contents-text">macOS Opencv4.0.1+xcode10.1 安装并配置</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#1-安装-OpenCV"><span class="section table-of-contents-text">1.安装 OpenCV</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#2-配置-Xcode-项目"><span class="section table-of-contents-text">2.配置 Xcode 项目</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#3-测试环境"><span class="section table-of-contents-text">3.测试环境</span></a></li></ol></li></ol>
-</div>
-
-
-            <div class="entry pink-link-context">
-                <h1 id="macOS-Opencv4-0-1-xcode10-1-安装并配置"><a href="#macOS-Opencv4-0-1-xcode10-1-安装并配置" class="headerlink" title="macOS Opencv4.0.1+xcode10.1 安装并配置"></a>macOS Opencv4.0.1+xcode10.1 安装并配置</h1><h3 id="1-安装-OpenCV"><a href="#1-安装-OpenCV" class="headerlink" title="1.安装 OpenCV"></a>1.安装 OpenCV</h3><p>使用命令:</p>
-<blockquote>
-<p><code>brew install opencv</code><br><code>brew install cmake</code></p>
-</blockquote>
-<p>安装 opencv 与 cmake</p>
-<h3 id="2-配置-Xcode-项目"><a href="#2-配置-Xcode-项目" class="headerlink" title="2.配置 Xcode 项目"></a>2.配置 Xcode 项目</h3><p>新建一个Command Line Tools 项目并选择语言为 C++<br>进入项目配置 -Build Setting-中的：  </p>
-<ol>
-<li><code>Header Search Paths</code>——<code>/usr/local/include/opencv4/</code></li>
-<li><code>Library Search Phts</code>——<code>/usr/local/lib</code><br><img src="http://head.redpold.xin/15480862797072.jpg" alt=""></li>
-</ol>
-<p>进入<code>General</code>–<code>Linked Frameworks and Libraries</code><br>点击左下角的+号选择 other 并导航到 OpenCV 的主目录<br>Finder使用 <code>command+shift+G</code>前往<code>/usr/local/Cellar/Opencv/4.0.1/lib</code><br>将所有以.dylib 的文件选中并且导入<br><img src="http://head.redpold.xin/15480863055144.jpg" alt=""></p>
-<h3 id="3-测试环境"><a href="#3-测试环境" class="headerlink" title="3.测试环境"></a>3.测试环境</h3><p>在 main.cpp中编写如下代码即可测试环境是否可以使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;opencv2/opencv.hpp&gt;</span><br><span class="line">using namespace cv;</span><br><span class="line">int main(int argc, char** argv) &#123;</span><br><span class="line">    Mat image;</span><br><span class="line">    image = imread(&quot;/Users/test/Pictures/1.JPG&quot;, 1);</span><br><span class="line">    namedWindow(&quot;Display Image&quot;, WINDOW_AUTOSIZE);</span><br><span class="line">    imshow(&quot;Display Image&quot;, image);</span><br><span class="line">    </span><br><span class="line">    Mat gray;</span><br><span class="line">    cvtColor(image, gray, COLOR_RGBA2GRAY);</span><br><span class="line">    namedWindow(&quot;gray&quot;);</span><br><span class="line">    imshow(&quot;gray&quot;, gray);</span><br><span class="line">    </span><br><span class="line">    waitKey(0);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Update:2019/1/21 23:34<br>更新内容图片</p>
-
-                
-<p class="pink-link-context">
-    <a href="/2019/01/21/hexo-github搭建博客/" rel="next" title="hexo-github搭建博客">
-    上一篇：hexo-github搭建博客
-  </a>
-</p>
-
-
-
-
-            </div>
-			
-        </div>
-    </div>
-</article>
-
-
-
-
 
 
 </div>
